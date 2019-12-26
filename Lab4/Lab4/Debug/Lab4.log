@@ -1,0 +1,3 @@
+﻿  Polynom.cpp
+c:\users\пк\desktop\mp2-lab4-polynom\lab4\lab4\polynom.cpp(301): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
+  Lab4.vcxproj -> C:\Users\пк\Desktop\mp2-lab4-polynom\Lab4\Debug\Lab4.exe
