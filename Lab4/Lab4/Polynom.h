@@ -39,32 +39,34 @@ struct Monom
 class Polynom
 {
 private:
-	Monom* head;
-	int size;
-public:
-	Polynom();
-	Polynom(const Polynom& polynom);
-	~Polynom();
+	Monom* head; // заголовок
+	int size; // длинна списка
 
-	int getSize() { return size; }
-	void clear();
-	void insert(Monom monom);
+public:
+	Polynom();// конструктор
+	Polynom(const Polynom& polynom); // конструктор копирования
+	~Polynom();// деструктор
+
+	int getSize() { return size; }// к-во звеньев
+	void clear();// очистить список
+	void insert(Monom monom); // вставка в список
 	void insert(double coef, int pow);
 
-	void merge(const Polynom& polynom);
-	void pop_front();
-	void push_front(Monom monom);
-	void push_back(Monom monom);
-	void del(Monom monom);
-	bool find(int pow);
+	void merge(const Polynom& polynom); // добавление полинома к другому
+	void pop_front();// удаление элемента из списка
+	void push_front(Monom monom); // вставка в начало
+	void push_back(Monom monom); // вставка в конец
+	void del(Monom monom); // удаление элемента из списка
+	bool find(int pow); // проверка на наличие в списке
 
-	int Calculate(int x);
-	Polynom operator+(const Polynom& right) const;
-	Polynom operator-(Polynom& right);
-	Polynom operator*(const Polynom& right);
+	int Calculate(int x); // вычисление
+	Polynom operator+(const Polynom& right) const; // сложение
+	Polynom operator-(Polynom& right); // вычитание
+	Polynom operator*(const Polynom& right); // умножение
 	Polynom operator*(const double& val) const;
-	const Polynom& operator = (const Polynom& right);
+	const Polynom& operator = (const Polynom& right); // присваивание
 
-	friend ostream& operator << (ostream& os, const Polynom& object);
+	friend ostream& operator << (ostream& os, const Polynom& object); // вывод
+
 };
 

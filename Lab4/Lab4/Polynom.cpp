@@ -291,7 +291,7 @@ Polynom Polynom::operator-(Polynom& right)//вычитание полиномов
 	return *this + c;
 }
 
-int Polynom::Calculate(int x) //раскрытие полинома
+int Polynom::Calculate(int x) //вычисление 
 {
 	Monom* tmp = head;
 	int res = 0;
